@@ -1,0 +1,35 @@
+
+package exercise02_11;
+
+
+import java.util.Scanner;
+public class Exercise02_11 {
+
+   
+    public static void main(String[] args) {
+        double secondsInAYear, birthPerYear, deathPerYear,immigrantsPerYear;
+        int years, currentPopulation = 312_032_486;
+       
+        
+        //Create scanner
+        Scanner input = new Scanner(System.in);
+        
+        //Compute Population
+        secondsInAYear = 60 * 60 * 24 * 365;
+        birthPerYear = secondsInAYear / 7.0;
+        deathPerYear = secondsInAYear / 13.0;
+        immigrantsPerYear = secondsInAYear / 45.0;
+        
+        //Enter number of years
+        System.out.print("Enter the number of years ");
+        years = input.nextInt();
+        
+        currentPopulation += (birthPerYear + immigrantsPerYear - deathPerYear) * years;
+        
+        //Display results
+        System.out.println("Population in " + years + " years is "+ currentPopulation);
+              
+        
+    }
+    
+}

@@ -1,0 +1,67 @@
+package exercise09_01;
+
+
+public class Exercise09_01 {
+
+
+    public static void main(String[] args) {
+        
+        // Rectangle with width 4 and height 40
+        Rectangle myRectangle = new Rectangle(4, 40);
+        
+        // Information about the first rectangle
+        System.out.println("The area of a rectangle with width " +
+                myRectangle.getWidth() + " and height " +
+                myRectangle.getHeight() + " is " +
+                myRectangle.getArea());
+        System.out.println("The perimeter of a rectangle is " +
+                myRectangle.getPerimeter());
+
+        // Rectangle with width 3.5 and height 35.9
+        Rectangle yourRectangle = new Rectangle(3.5, 35.9);
+        
+        // Information about the second rectangle
+        System.out.println("The area of a rectangle with width " +
+                yourRectangle.getWidth() + " and height " +
+                yourRectangle.getHeight() + " is " +
+                yourRectangle.getArea());
+        System.out.println("The perimeter of a rectangle is " +
+                yourRectangle.getPerimeter());
+    }
+}
+class Rectangle {
+    private double width;
+    private double height;
+
+    // Create a default rectangle
+    public Rectangle() {
+        this.width = 1.0;
+        this.height = 1.0;
+    }
+
+    // Width and height
+    public Rectangle(double width, double height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    // Width
+    public double getWidth() {
+        return width;
+    }
+
+    // Height
+    public double getHeight() {
+        return height;
+    }
+
+    // Calculate and return the area of the rectangle
+    public double getArea() {
+        return width * height;
+    }
+
+    // Calculate and return the perimeter of the rectangle
+    public double getPerimeter() {
+        return 2 * (width + height);
+    }
+}
